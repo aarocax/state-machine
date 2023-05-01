@@ -1,0 +1,73 @@
+[
+    {
+        "transitions": {
+            "INITIAL": {
+                "transitions": [
+                    {
+                        "from": "INITIAL",
+                        "event": "GO_TO_A",
+                        "to": "A",
+                        "tab": 0,
+                        "show_tab": 1
+                    }
+                ],
+                "isInitial": true
+            },
+            "A": {
+                "transitions": [
+                    {
+                        "from": "A",
+                        "event": "GO_TO_B",
+                        "to": "B",
+                        "tab": 1,
+                        "show_tab": 2
+                    },
+                    {
+                        "from": "A",
+                        "event": "BACK_TO_INITIAL",
+                        "to": "INITIAL",
+                        "tab": 1,
+                        "show_tab": 0
+                    }
+                ]
+            },
+            "B": {
+                "transitions": [
+                    {
+                        "from": "B",
+                        "event": "GO_TO_C",
+                        "to": "C",
+                        "tab": 2,
+                        "show_tab": 3
+                    },
+                    {
+                        "from": "B",
+                        "event": "BACK_TO_A",
+                        "to": "A",
+                        "tab": 2,
+                        "show_tab": 1
+                    }
+                ]
+            },
+            "C": {
+                "transitions": [
+                    {
+                        "from": "C",
+                        "event": "GO_TO_FINAL",
+                        "to": "FINAL",
+                        "tab": 3,
+                        "show_tab": 4
+                    },
+                    {
+                        "from": "C",
+                        "event": "BACK_TO_B",
+                        "to": "B",
+                        "tab": 3,
+                        "show_tab": 2
+                    }
+                ],
+                "isFinal": true
+            }
+        }
+    }
+]
